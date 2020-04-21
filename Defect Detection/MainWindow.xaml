@@ -4,9 +4,52 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Defect_Detection"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" FontFamily="Segoe UI Light"
+        Title="Defect Detection" Height="350" Width="525">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
 
+        <!--First Column-->
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Options" 
+                   FontSize="16" Padding="5"/>
+        <CheckBox Grid.Column="1" Grid.Row="2" 
+                  Content="Save copies of images with defects"
+                  IsChecked="False" Margin="5"/>
+        <CheckBox Grid.Column="1" Grid.Row="3" 
+                  Content="Open folder when scan is complete"
+                  IsChecked="False" Margin="5"/>
+        <CheckBox Grid.Column="1" Grid.Row="4" 
+                  Content="Preserve program settings"
+                  IsChecked="True" Margin="5"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="Reset Defaults"
+                Margin="5"/>
+        
+        <!--Second Column-->
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="Image Processing"
+                   FontSize="16" Padding="5"/>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="No images selected..."
+                   Margin="5"/>
+        <Button Grid.Column="2" Grid.Row="4" Content="Select Images"
+                Margin="5"/>
+        <Button Grid.Column="2" Grid.Row="5" Content="Scan Images"
+                Margin="5"/>
+        <Image Grid.Column="2" Grid.Row="7" Height="150" Width="240"
+               Stretch="UniformToFill"/>
     </Grid>
 </Window>
